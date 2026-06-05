@@ -1,36 +1,33 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Anket</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background: #f4f4f4;
-      padding: 30px;
-    }
-    img {
-      max-width: 90%;
-      border-radius: 10px;
-      margin-bottom: 20px;
-    }
-    button {
-      font-size: 20px;
-      padding: 10px 25px;
-      margin: 10px;
-      cursor: pointer;
-    }
-  </style>
+  <title>Bilmece 💙</title>
 </head>
-<body>
+<body style="text-align:center; margin-top:50px;">
 
-<img src="https://via.placeholder.com/600x400" alt="Resim">
+<h2>💭 Bilmece:</h2>
+<p>Uğurlu sayın nedir?</p>
 
-<h2>Kabul ediyor musun?</h2>
+<input type="text" id="cevap" placeholder="Cevabını yaz">
+<br><br>
+<button onclick="check()">Cevabı kontrol et</button>
 
-<button onclick="alert('Cevabın için teşekkürler: Evet')">Evet</button>
-<button onclick="alert('Cevabın için teşekkürler: Hayır')">Hayır</button>
+<p id="sonuc"></p>
+
+<img id="resim" src="D825D307-4207-448F-9A4F-1D3AE127BE0B.jpeg" width="500" style="display:none;">
+
+<script>
+function check() {
+  let a = document.getElementById("cevap").value.trim();
+
+  if(a === "3") {
+    document.getElementById("sonuc").innerHTML = "Doğru 💙";
+    document.getElementById("resim").style.display = "block";
+  } else {
+    document.getElementById("sonuc").innerHTML = "Yanlış 😢";
+  }
+}
+</script>
 
 </body>
 </html>
